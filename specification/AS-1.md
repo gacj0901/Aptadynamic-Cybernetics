@@ -48,7 +48,7 @@ Memoryless (Markovian) evaluation is expressly non-conformant. *Empirical signat
 **P3 — The threshold contracts with history (endogeneity).**
 What a system can tolerate is not fixed: past excess reduces future absorption capacity. The threshold Θ MUST be an increasing function of historical permissivity λ(t), and λ MUST be eroded by accumulated excess (Ξ−Θ)⁺. Fixed numeric thresholds (e.g. 0.75 / 0.50 / 0.25) are the negation of this principle and MUST NOT be used.
 
-**P4 — Asymmetric recovery (non-reincarnation).**
+**P4 — Asymmetric recovery (non-restitution).**
 Permissivity may recover; accumulation never does. Recovery dynamics MUST satisfy:
 
 > dλ/dt ≤ r(λ_eq − λ),  with ∂Ξ/∂λ = 0
