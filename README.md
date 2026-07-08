@@ -59,7 +59,7 @@ The **PRAMA Protokol** is the discipline's operational protocol: the domain-inde
 
 - **Reference implementation and first empirical validation:** [`Aptadynamic-Electrical-Grid`](https://github.com/gacj0901/Aptadynamic-Electrical-Grid) — the PRAMA Protokol over Bonneville Power Administration transmission outage data (BPA 1999–2017; NYISO 2008–2021).
 
-Key validated results: conditional severity discrimination at ratio **16.0** inside latent-collapse periods (vs 3.16 for the best strictly causal Markovian baseline, permutation p < 0.001); on NYISO, an initial negative result (0.55) was traced to a degenerate observation interface and corrected to **1.90** without touching the kernel — the operational demonstration that the kernel/observation separation localizes failure where the architecture says it should.
+Key validated results: conditional severity discrimination at ratio 28.75 inside latent-collapse periods (vs 3.16 for the best strictly causal Markovian baseline, permutation p < 0.001); on NYISO, an initial negative result (0.55) was traced to a degenerate observation interface and corrected to 2.44 without touching the kernel — the operational demonstration that the kernel/observation separation localizes failure where the architecture says it should.
 
 **Denomination.** The protocol is always referred to as **PRAMA Protokol** in full; the admissible short form is *the Protokol*.
 
