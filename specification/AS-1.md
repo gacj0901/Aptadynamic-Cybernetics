@@ -108,9 +108,9 @@ A conformant implementation — a **PRAMA Protokol Engine** — consists of four
 ┌─────────────────────────────────────────────────────┐
 │                PRAMA Protokol Engine                │
 │                                                     │
-│  Observation Interface (O_𝒟)   ← the ONLY domain-   │
+│  Observation Interface (O_D)   ← the ONLY domain-   │
 │    raw measurements → normalized  specific part     │
-│    causal observables Ω                             │
+│    causal observables Ω           (contract C1–C5)  │
 │                                                     │
 │  Reference Kernel (π)          ← universal, fixed,  │
 │    Ω → Γ = (Δ,Ξ,λ,Θ,M,G)         identical across   │
@@ -121,8 +121,9 @@ A conformant implementation — a **PRAMA Protokol Engine** — consists of four
 │    → regimes → alerts             batching, replay  │
 │                                                     │
 │  Compliance Module             ← verification that  │
-│    conformance checks, study      P1–P7 hold in     │
-│    discipline, audit records      this deployment   │
+│    conformance checks, study      the principles    │
+│    discipline, audit records      hold in this      │
+│                                   deployment        │
 └─────────────────────────────────────────────────────┘
 ```
 
