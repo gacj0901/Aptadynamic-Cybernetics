@@ -76,7 +76,7 @@ Key validated results: conditional severity discrimination at ratio 28.75 inside
 
 If you use or discuss this work, cite the Corpus:
 
-> G.A.C.J. (2026). *Aptadinamia — Corpus Lógico-Matemático: Tratado de viabilidad estructural, persistencia y recursividad sincisional emergente.* Zenodo. https://doi.org/10.5281/zenodo.20369325
+> G.A.C.J. (2026). *Aptadinamia — Corpus Lógico-Matemático: Tratado de viabilidad estructural, persistencia y recursividad sincisional emergente.* Zenodo. https://zenodo.org/records/21270506
 
 and, for the operational protocol, the AS-1 specification in this repository together with the relevant validation study.
 
