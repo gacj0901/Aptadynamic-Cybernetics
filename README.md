@@ -57,9 +57,18 @@ Aptadynamic Cybernetics
 
 The **PRAMA Protokol** is the discipline's operational protocol: the domain-independent method, specified in AS-1, for evaluating structural viability from observable event streams. Its engineering artifacts live in their own repositories:
 
-- **Reference implementation and first empirical validation:** [`Aptadynamic-Electrical-Grid`](https://github.com/gacj0901/Aptadynamic-Electrical-Grid) — the PRAMA Protokol over Bonneville Power Administration transmission outage data (BPA 1999–2017; NYISO 2008–2021).
+- **Reference implementation and electrical-domain studies:** [`Aptadynamic-Electrical-Grid`](https://github.com/gacj0901/Aptadynamic-Electrical-Grid) — BPA G1, NYISO G1 and the preregistered multichannel NYISO G2 confrontation.
 
-Key validated results: conditional severity discrimination at ratio 28.75 inside latent-collapse periods (vs 3.16 for the best strictly causal Markovian baseline, permutation p < 0.001); on NYISO, an initial negative result (0.55) was traced to a degenerate observation interface and corrected to 2.44 without touching the kernel — the operational demonstration that the kernel/observation separation localizes failure where the architecture says it should.
+**Current empirical status (July 2026):** no successful validation of
+incremental PRAMA value is established. BPA G1 is invalid for confirmatory
+claim because its observation interface failed C3 in evaluation. NYISO G1 is
+an honest null under its frozen historical rules. NYISO G2 is a valid
+confirmatory negative result: the primary CH-L interface passed every gate,
+but the calibration-selected B-TRIV baseline outperformed the Protokol
+(`contrast = -0.049623`, one-sided `p = 1.0`), activating the frozen
+program-falsification rule. A positive secondary result against B-AC1 is
+retained but does not replace the primary comparison. Historical ratios 28.75,
+16.0, 2.44 and 1.90 are exploratory provenance, not current validation claims.
 
 **Denomination.** The protocol is always referred to as **PRAMA Protokol** in full; the admissible short form is *the Protokol*.
 

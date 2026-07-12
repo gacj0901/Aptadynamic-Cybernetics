@@ -9,7 +9,7 @@
 **References (non-normative):**
 - *Systemic Foundation* — the program's conceptual technical reference. Source of the framework's vocabulary and principles.
 - *Logical–Mathematical Corpus* — the formal reference. Full axiomatization, theorems, and proofs. DOI: 10.5281/zenodo.20369325.
-- *Aptadynamic-Electrical-Grid* — the reference implementation and first empirical validation (BPA 1999–2017; NYISO 2008–2021).
+- *Aptadynamic-Electrical-Grid* — the reference implementation and electrical-domain study record (BPA G1, NYISO G1 and NYISO G2).
 
 Neither reference is required to implement this specification. They are required to *extend* it.
 
@@ -43,7 +43,7 @@ Structural cost that is not paid does not disappear; it is displaced onto the fu
 
 > Ξ(t) = ∫₀ᵗ K(t−τ) Δ(τ) dτ,  K causal, K ≥ 0
 
-Memoryless (Markovian) evaluation is expressly non-conformant. *Empirical signature:* on BPA data, the memory-bearing accumulator discriminated conditional severity at ratio 16.0 where the best strictly causal Markovian baseline reached 3.16.
+Memoryless (Markovian) evaluation is expressly non-conformant. *Historical exploratory provenance:* an early BPA procedure reported conditional-severity ratio 16.0 against 3.16 for a causal Markovian baseline. The later frozen BPA G1 record failed C3 in evaluation, so those ratios are not current validation evidence.
 
 **P3 — The threshold contracts with history (endogeneity).**
 What a system can tolerate is not fixed: past excess reduces future absorption capacity. The threshold Θ MUST be an increasing function of historical permissivity λ(t), and λ MUST be eroded by accumulated excess (Ξ−Θ)⁺. Fixed numeric thresholds (e.g. 0.75 / 0.50 / 0.25) are the negation of this principle and MUST NOT be used.
@@ -60,14 +60,14 @@ The framework measures a system's deviation from *its own causally expected beha
 
 > Δ(t) = |ω(t) − ω̂(t)| / (ω̂(t) + 1),  ω̂(t) = E[ω(t) | past only]
 
-A Δ that correlates strongly with raw activity has degenerated and invalidates the study (§8). *Empirical signature:* on NYISO data, a degenerate intensity-based Δ produced ratio 0.55 (failure); genuine causal decoupling produced ratio 1.90 — same kernel, unchanged. The failure belonged to the observation, not the kernel. This episode is the operational proof that P5 is not optional.
+A Δ that correlates strongly with raw activity has degenerated and invalidates the study (§8). *Historical exploratory provenance:* an early NYISO procedure reported ratio 0.55 under a degenerate intensity-based Δ and 1.90 after an interface change, with the kernel unchanged. These figures motivated the mechanical P5/C3 gate; they are not current confirmatory evidence. Under NYISO G2, the primary load interface passed C3 in both partitions and the preregistered performance criterion was nevertheless not met.
 
 **P6 — Latent collapse: operation is not persistence.**
 The most dangerous phase of a system's life is the one in which it still functions while consuming what makes its functioning possible. Latent collapse is defined by the simultaneous conditions:
 
 > σ_op(t) = 1  ∧  M(t) ≥ 0  ∧  G(t) < 0
 
-(operational, margin still positive, margin generation negative). Implementations MUST compute and expose this condition. *Empirical signature:* inside latent-collapse periods on BPA data, P(severe cascade) = 0.091 vs 0.006 outside.
+(operational, margin still positive, margin generation negative). Implementations MUST compute and expose this condition. *Historical exploratory provenance:* an early BPA procedure reported P(severe cascade) = 0.091 inside latent-collapse periods vs 0.006 outside. The later BPA G1 record was invalid for confirmatory claim, so this contrast is not a current validation result.
 
 **P7 — Kernel / observation separation (universality).**
 The protocol is the composition
@@ -133,7 +133,7 @@ A conformant implementation — a **PRAMA Protokol Engine** — consists of four
 
 # 5. Observation Interface Contract
 
-An observation interface O_𝒟 is conformant if and only if it satisfies all of the following. These conditions were not designed a priori; they were extracted from what empirical validation showed to be necessary.
+An observation interface O_𝒟 is conformant if and only if it satisfies all of the following. These conditions were formalized from theoretical requirements, exploratory provenance and registered interface failures. Their normative authority does not depend on a positive empirical result.
 
 **C1 — Strict observability.** Only externally observable events enter the protocol. No hidden state, no internal variables, no mechanism assumptions. Input is a temporally ordered stream Ω = {ω_t}.
 
@@ -185,7 +185,7 @@ Claiming more than this on behalf of the framework is non-conformant communicati
 
 **The universality claim and its test.** Each new domain study runs the *identical* kernel behind a newly written observation interface. Every conformant study that discriminates adds evidence of universality; a conformant study that fails to discriminate — where the interface passed all checks and the data was informationally sufficient — is evidence *against* the framework, and MUST be published as such. The framework stakes its credibility on this asymmetry being real.
 
-**Current evidential status (July 2026).** One validated domain (electrical transmission: BPA confirmatory-grade discrimination at ratio 16.0; NYISO 1.90 after interface correction, both above permutation nulls). The NYISO failure-and-correction episode is part of the public record by design: it demonstrates that the kernel/observation separation localizes failure where the architecture says it should. Studies predating this specification are classified *exploratory*; the first fully disciplined multi-domain study is the program's declared next milestone.
+**Current evidential status (July 2026).** No domain has established successful confirmatory validation of incremental PRAMA value. BPA G1 is invalid for confirmatory claim because C3 failed in evaluation. NYISO G1 is an honest null under its frozen historical rules. NYISO G2 is the fully preregistered electrical confrontation: its primary CH-L observation interface passed every calibration and evaluation gate, but the Protokol did not beat the calibration-selected B-TRIV comparator (`contrast = -0.049623`, one-sided `p = 1.0`). Under its frozen rule this activated program falsification. A positive Holm-significant secondary contrast against B-AC1 is retained without replacing the primary test. Historical BPA/NYISO ratios remain exploratory provenance only. This negative result is evidence against incremental empirical value in the declared confrontation, exactly as the universality test above requires.
 
 ---
 
